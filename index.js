@@ -16,8 +16,10 @@
   }
 
   // jQuery plugin
-  $.fn.fullHeight = function() {
-    fullHeight(this, this.data() || {});
+  $.fn.fullHeight = function(config) {
+    config = config || {};
+    $.extend(true, config, this.data());
+    fullHeight(this, config);
     return this;
   };
 
