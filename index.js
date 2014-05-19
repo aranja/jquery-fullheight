@@ -1,33 +1,28 @@
-'use strict';
+(function() {
+  'use strict';
 
-function resize (element, container) {
-  element.height( container.height() );
-}
+  function resize(element, container) {
+    element.height(container.height());
+  }
 
-function iterateAll() {
-  var $this = $(this);
-  fullHeight.call($this, $this.data());
-}
+  function fullHeight(element, options) {
+    var container = $(options.container || window);
 
-function iterateEach() {
-  var $this = $(this);
-  var $container = $($this.data().container || window);
+    container.on('resize.aranja', function() {
+      resize(element, container);
+    });
 
-  $container.on('resize.aranja-evt', function() {
-    resize($this, $container);
+    resize(element, container);
+  }
+
+  // jQuery plugin
+  $.fn.fullHeight = function() {
+    fullHeight(this, this.data() || {});
+    return this;
+  };
+
+  // Data attributes
+  $(function() {
+    $('[data-full-height]').fullHeight();
   });
-
-  resize($this, $container);
-}
-
-function fullHeight() {
-  return this.each(iterateEach);
-}
-
-function loaded() {
-  $('[data-full-height]').each(iterateAll);
-}
-
-$(window).on('load', loaded);
-
-$.fn.fullHeight = fullHeight;
+})();
