@@ -19,10 +19,6 @@ module.exports = function(config) {
         pattern: 'demos/js/jquery.js',
         included: true
       },
-      {
-        pattern: 'demos/viewport.html',
-        watched: true
-      },
       'index.js',
       'tests/**/*.js'
     ],
