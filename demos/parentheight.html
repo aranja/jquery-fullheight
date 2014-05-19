@@ -6,11 +6,14 @@
   <title>Araja - Components/Cover</title>
   <style>
   html,body{margin: 0; padding: 0;}
-  .Box { background: red; }
+  .Parent { background: red; height: 500px; }
+  .Child { background: green; }
   </style>
 </head>
 <body>
-  <div class="Box" data-full-height> </div>
+  <div class="Parent">
+    <div class="Child" data-full-height data-container=".Parent"> </div>
+  </div>
   <script src="js/jquery.js"></script>
   <script src="../index.js"></script>
 </body>
