@@ -1,4 +1,4 @@
-(function() {
+(function($) {
   'use strict';
 
   function resize(element, container) {
@@ -25,4 +25,4 @@
   $(function() {
     $('[data-full-height]').fullHeight();
   });
-})();
+})(jQuery);
