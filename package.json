@@ -1,16 +1,11 @@
 {
   "name": "aranja-full-height",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Fill up either viewport height or container height.",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "http://github.com/aranja/aranja-full-height.git"
-  },
-  "author": {
-    "name": "Ragnar Þór Valgeirsson (rthor)",
-    "email": "ragnar.valgeirsson@gmail.com",
-    "url": "http://rthor.is"
   },
   "bugs": {
     "url": "https://github.com/aranja/aranja-full-height/issues"
