@@ -1,0 +1,18 @@
+{
+  "name": "full-height",
+  "main": "index.js",
+  "version": "0.0.2",
+  "homepage": "https://github.com/aranja/aranja-full-height",
+  "authors": [
+    "Aranja"
+  ],
+  "description": "Fill up either viewport height or container height",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
