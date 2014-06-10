@@ -3,6 +3,19 @@
   "version": "0.0.1",
   "description": "Fill up either viewport height or container height.",
   "main": "index.js",
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "plugin": {
+      "exports": "plugin",
+      "depends": [
+        "jquery:$"
+      ]
+    }
+  },
   "repository": {
     "type": "git",
     "url": "http://github.com/aranja/aranja-full-height.git"
@@ -14,7 +27,9 @@
   "keywords": [],
   "license": "MIT",
   "devDependencies": {
-    "browserify": "^3.0.0",
+    "browserify": "~4.1.5",
+    "browserify-shim": "~3.5.0",
+    "watchify": "~0.10.1",
     "karma": "~0.12.16",
     "karma-chrome-launcher": "~0.1.3",
     "karma-firefox-launcher": "~0.1.3",
@@ -23,5 +38,7 @@
     "karma-mocha": "~0.1.3",
     "karma-chai": "~0.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "~1.11.1"
+  }
 }
