@@ -1,6 +1,6 @@
 {
   "name": "aranja-full-height",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Fill up either viewport height or container height.",
   "main": "index.js",
   "browserify": {
