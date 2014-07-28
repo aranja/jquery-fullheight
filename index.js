@@ -31,7 +31,8 @@ ViewportHeight.prototype.resize = function() {
 };
 
 ViewportHeight.prototype.dispose = function() {
-  this.container.off('resize.aranja.viewportheight');
+  this.container.off('.aranja.viewportheight');
+  this.el.css(this.property, '');
 };
 
 
@@ -52,3 +53,9 @@ $.fn.fullHeight = function(options) {
 $(function() {
   $('[data-full-height]').fullHeight();
 });
+
+
+/**
+ * CommonJS export
+ */
+module.exports = ViewportHeight;
